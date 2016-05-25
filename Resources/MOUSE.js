@@ -1,14 +1,16 @@
 var MOUSE = (function(){
 
-	var mouseposition=0;
+	var verticalPosition=0;
 		
 	
 	var public={
-		getPosition:function(){
-			return mouseposition;
+		getVerticalPosition:function(){
+			return verticalPosition;
 	},
-	setPosition:function(position){
-		mouseposition=position;
+	setVerticalPosition:function(eventY,elementY){
+		//Set the vertical position of mouse
+		//taking the event Y coordinate and the elementY  coordinate
+		verticalPosition=eventY-elementY;
 	},
 
 	};

@@ -21,7 +21,7 @@ var public= {
 
 		return {W:width, H:height};
 	},
-	getOffset:function(){
+	getOffset: function(){
 		return offset;
 	}
 }

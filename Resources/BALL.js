@@ -49,7 +49,10 @@ var BALL=(function(){
 			if(Xcord+radius>=canvas.H ||Xcord-radius<=0)
 			{
 				this.setCenter({W:canvas.W, H:canvas.H});
+				return "1";
 			}
+
+			return 0;
 
 		},
 		getSpeed:function(){
@@ -74,8 +77,11 @@ var BALL=(function(){
 		},
 		calculatePosition: function(){
 
+
 			preXcord=this.getPosition().Xcord;
 			preYcord=this.getPosition().Ycord;
+
+
 			var position={x:Xspeed +this.getPosition().Xcord,
 			y:Yspeed +this.getPosition().Ycord};
 
