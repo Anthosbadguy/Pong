@@ -13,19 +13,20 @@ var public={
 		_maxTime=time;
 	},
 	displayMaxTime:function(time){
-		$('.maxtime').text(_maxTime);
+		$('.maxtime').text(_maxTime.toFixed(2));
 	},
 	getCurrentTime:function(){
 		return _currentTime;
 	},
+	resetCurrentTime:function(){
+		_currentTime=0;
+	},
 	addToCurrentTime:function(time){
-		console.log(_currentTime);
-		console.log(time);
 		_currentTime+=time;
 	},
-	displayCurrentTime:function(time){
+	displayCurrentTime:function(){
 
-		$('.time').text(_currentTime);
+		$('.time').text(_currentTime.toFixed(2));
 	}
 
 }

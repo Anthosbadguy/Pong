@@ -5,6 +5,8 @@ var BALL=(function(){
 	Ycord=0;
 	radius=10;
 	acceleration=0;
+	baseXSpeed=-4;
+	baseYSpeed=-1.8;
 	Xspeed=-4;
 	Yspeed=-1.8;
 	public={
@@ -29,6 +31,7 @@ var BALL=(function(){
 				
 			Xspeed=(-1)*Xspeed;	
 
+			return 1;
 			}
 
 //collides with right player
@@ -49,14 +52,24 @@ var BALL=(function(){
 			if(Xcord+radius>=canvas.H ||Xcord-radius<=0)
 			{
 				this.setCenter({W:canvas.W, H:canvas.H});
-				return "1";
+				return 2;
 			}
 
 			return 0;
 
 		},
+		increaseSpeed:function(){
+
+			Xspeed*=1.03;
+			Yspeed*=1.04;
+		},
 		getSpeed:function(){
 			return;
+		},
+		setToBaseSpeed:function(){
+			Xspeed=baseXSpeed;
+			Yspeed=baseYSpeed;
+
 		},
 		drawBall:function(context){
 

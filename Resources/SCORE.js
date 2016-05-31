@@ -13,11 +13,19 @@ var public={
 	setMaxScore:function(score){
 		_maxScore=score;
 	},
+	displayMaxScore:function(){
+
+		$('.maxscore').text(_maxScore);
+	},
 	getCurrentScore:function(){
 		return _currentScore;
 	},
 	setCurrentScore:function(time){
-		_currentScore=time*100;
+		_currentScore = parseInt(time*20);
+	},
+	displayCurrentScore:function(){
+
+		$('.score').text(_currentScore);
 	}
 
 }
